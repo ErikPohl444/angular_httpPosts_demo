@@ -1,5 +1,6 @@
 <div ng-app="filterApp" ng-controller="httpController">
-    <select>
-      <option ng-repeat="post in posts">{{post.title}} </option>
+    <select ng-model="posting" ng-change="handleChange(posting)">
+      <option ng-repeat="post in posts" value="{{post.id}}">
+      {{post.id + ". " + post.title}} </option>
     </select>
   </div>
