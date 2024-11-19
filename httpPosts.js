@@ -7,6 +7,9 @@ app.controller("httpController", function($scope, $http) {
   });
   
   $scope.handleChange = function(postingid) {
-  	alert("post has changed!" + postingid);
-  }
+  		$http.get("https://jsonplaceholder.typicode.com/comments?postId=" + postingid)
+  .success(function(postcomments) {
+  	$scope.comments = postcomments;
+  });
+  };
 });

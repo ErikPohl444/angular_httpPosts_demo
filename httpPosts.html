@@ -3,4 +3,9 @@
       <option ng-repeat="post in posts" value="{{post.id}}">
       {{post.id + ". " + post.title}} </option>
     </select>
-  </div>
+    <ul>
+    <li ng-repeat="c in comments">
+      {{c.email}} - {{c.body}}
+    </li>
+    </ul>
+</div>
